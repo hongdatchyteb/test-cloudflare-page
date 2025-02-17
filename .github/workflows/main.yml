@@ -23,11 +23,11 @@ jobs:
         with:
           node-version: '22.11.0'
 
-      # Bước 4: Cài đặt dependencies với pnpm
-      - run: pnpm install
+      # Bước 4: Cài đặt dependencies với npm
+      - run: npm install
 
       # Bước 4: Build
-      - run: pnpm run build
+      - run: npm run build
 
       # Bước 7: Triển khai lên Cloudflare Pages
       - name: Deploy to Cloudflare Pages
