@@ -39,5 +39,5 @@ jobs:
           cloudflare-project-name: test-cloudflare-page
           directory: .next  # Đảm bảo thư mục dist là nơi chứa các file sau khi build (có thể thay đổi tùy theo dự án)
           github-token: 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
-          github-environment: ${{ (github.ref == 'refs/heads/main' && 'github-pages')}}
+          github-environment: ${{ (github.ref == 'refs/heads/main' && 'production')}}
           
