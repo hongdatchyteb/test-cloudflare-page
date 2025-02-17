@@ -34,10 +34,10 @@ jobs:
         uses: andykenward/github-actions-cloudflare-pages@v2.3.2
         id: pages
         with:
-          cloudflare-api-token: zUOipkf1lJhcveN3z-xl5S-ONoBVLOAXpWJRxn3W
-          cloudflare-account-id: a61dcf06b48e9d50192ef57cc997da88
+          cloudflare-api-token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          cloudflare-account-id: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           cloudflare-project-name: test-cloudflare-page
           directory: .next  # Đảm bảo thư mục dist là nơi chứa các file sau khi build (có thể thay đổi tùy theo dự án)
-          github-token: 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
+          github-token:  ${{ secrets.GITHUB_TOKEN }}
           github-environment: ${{ (github.ref == 'refs/heads/main' && 'production')}}
           
